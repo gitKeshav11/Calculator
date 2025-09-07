@@ -1,0 +1,190 @@
+/* Reset and Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    background: #f5d8bda3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Calculator Box */
+.calculator {
+    width: 100%;
+    max-width: 350px;
+    background: #bc1e1e;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Display Area */
+.display {
+    background: #eaebec;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: right;
+    margin-bottom: 20px;
+    word-wrap: break-word;
+}
+
+#expression {
+    font-size: 18px;
+    color: #777;
+    min-height: 20px;
+}
+
+#result {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Buttons Grid */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+button {
+    padding: 18px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    background: #d0d8ed;
+    color: #333;
+    cursor: pointer;
+    transition: 0.2s;
+    font-weight: 500;
+}
+
+button:hover {
+    background: #e5ffd6;
+}
+
+.operator {
+    background: #7995f9;
+    color: #fff;
+}
+
+.operator:hover {
+    background: #283461;
+}
+
+.equal {
+    background: #38b15c;
+    color: #fff;
+    grid-column: span 2;
+}
+
+.equal:hover {
+    background: #68faa7;
+}
+
+.clear {
+    background: #6cc5cd;
+    color: #ffffff;
+}
+
+.clear:hover {
+    background: #100101;
+}
+
+.zero {
+    grid-column: span 2;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background: #75aaff;
+    color: #ffffff;
+}
+
+.dark-mode .calculator {
+    background: #000000;
+}
+
+.dark-mode .display {
+    background: #feffff;
+    color: #0f0e0e;
+}
+
+.dark-mode button {
+    background: #566ec3;
+    color: #fff;
+}
+
+.dark-mode .operator {
+    background: #7c5cff;
+}
+
+.dark-mode .equal {
+    background: #32d6a1;
+}
+
+/* Button Animation */
+button.active {
+    transform: scale(0.95);
+    transition: transform 0.15s ease;
+}
+
+/* History Section */
+#history-container {
+    max-width: 350px;
+    width: 100%;
+    background: #fffefe;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 6px 16px rgba(241, 64, 64, 0.1);
+}
+
+#history-container h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+.history-item {
+    font-size: 16px;
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.dark-mode #history-container {
+    background: #000000;
+    color: #fff;
+}
+
+.dark-mode .history-item {
+    border-bottom: 1px solid #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+    .calculator {
+        padding: 15px;
+    }
+    .display {
+        padding: 15px;
+    }
+    #expression {
+        font-size: 16px;
+    }
+    #result {
+        font-size: 24px;
+    }
+    button {
+        padding: 14px;
+        font-size: 16px;
+    }
+}
